@@ -34,7 +34,7 @@ export class CreateQuestionController {
       data: {
         title,
         content,
-        slug: 'asd',
+        slug,
         authorId: userId,
       },
     })
