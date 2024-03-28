@@ -45,6 +45,7 @@
     "@types/node": "^20.3.1",
     "@types/passport-jwt": "^4.0.1",
     "@vitest/coverage-v8": "^1.4.0",
+    "dotenv": "^16.4.5",
     "eslint": "^8.56.0",
     "prisma": "^5.8.1",
     "ts-node": "^10.9.1",
