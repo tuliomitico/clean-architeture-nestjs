@@ -76,10 +76,10 @@ model Comment {
   authorId  String    @map("author_id")
   content   String
 
-  question   Question @relation(fields: [questionId], references: [id])
-  answer     Answer   @relation(fields: [answerId], references: [id])
-  questionId String   @map("question_id")
-  answerId   String   @map("answer_id")
+  question   Question? @relation(fields: [questionId], references: [id])
+  answer     Answer?   @relation(fields: [answerId], references: [id])
+  questionId String?   @map("question_id")
+  answerId   String?   @map("answer_id")
 
   @@map("comments")
 }
@@ -88,11 +88,11 @@ model Attachment {
   id         String @id @default(uuid())
   title      String
   url        String
-  questionId String @map("question_id")
-  answerId   String @map("answer_id")
+  questionId String? @map("question_id")
+  answerId   String? @map("answer_id")
 
-  question Question @relation(fields: [questionId], references: [id])
-  answer   Answer   @relation(fields: [answerId], references: [id])
+  question Question? @relation(fields: [questionId], references: [id])
+  answer   Answer?   @relation(fields: [answerId], references: [id])
 
   @@map("attachments")
 }

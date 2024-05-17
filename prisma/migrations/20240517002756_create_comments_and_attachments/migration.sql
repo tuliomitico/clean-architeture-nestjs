@@ -8,8 +8,8 @@ CREATE TABLE "comments" (
     "updated_at" TIMESTAMP(3),
     "author_id" TEXT NOT NULL,
     "content" TEXT NOT NULL,
-    "question_id" TEXT NOT NULL,
-    "answer_id" TEXT NOT NULL,
+    "question_id" TEXT  NULL,
+    "answer_id" TEXT  NULL,
 
     CONSTRAINT "comments_pkey" PRIMARY KEY ("id")
 );
@@ -19,8 +19,8 @@ CREATE TABLE "attachments" (
     "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "url" TEXT NOT NULL,
-    "question_id" TEXT NOT NULL,
-    "answer_id" TEXT NOT NULL,
+    "question_id" TEXT  NULL,
+    "answer_id" TEXT  NULL,
 
     CONSTRAINT "attachments_pkey" PRIMARY KEY ("id")
 );
