@@ -11,8 +11,8 @@ export class PrismaQuestionCommentMapper {
       {
         content: raw.content,
         authorId: new UniqueEntityID(raw.authorId),
+        questionId: new UniqueEntityID(raw.questionId),
         createdAt: raw.createdAt,
-        questionId: new UniqueEntityID(raw.answerId),
         updatedAt: raw.updatedAt,
       },
       new UniqueEntityID(raw.id),
